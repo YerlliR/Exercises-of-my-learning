@@ -1,2 +1,2 @@
 # Exercises-of-my-learning
-This repository contains all the exercises I have been doing during my Java learning.
+###These are all the exercises that have been requested of me in class during the time I have been studying (they go from least difficult to most).
