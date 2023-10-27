@@ -29,7 +29,10 @@ public class Ex2 {
                 (tabla[1][0].equals("x") && tabla[1][1].equals("x") && tabla[1][2].equals("x")) ||
                 (tabla[0][0].equals("x") && tabla[1][0].equals("x") && tabla[2][0].equals("x")) ||
                 (tabla[0][0].equals("x") && tabla[0][1].equals("x") && tabla[0][2].equals("x"))){
+
             System.out.println("¡¡¡¡¡¡¡¡¡¡¡¡¡¡Has ganado!!!!!!!!!!!!!!! ");
+            System.exit(0);
+
         } else if (
                 (tabla[0][2].equals("0") && tabla[1][1].equals("0") && tabla[2][0].equals("0")) ||
                 (tabla[0][0].equals("0") && tabla[1][1].equals("0") && tabla[2][2].equals("0")) ||
@@ -39,6 +42,9 @@ public class Ex2 {
                 (tabla[1][0].equals("0") && tabla[1][1].equals("0") && tabla[1][2].equals("0")) ||
                 (tabla[0][0].equals("0") && tabla[1][0].equals("0") && tabla[2][0].equals("0")) ||
                 (tabla[0][0].equals("0") && tabla[0][1].equals("0") && tabla[0][2].equals("0"))) {
+
+            System.out.println("Has perdido");
+            System.exit(0);
 
         }else {
             System.out.println();
