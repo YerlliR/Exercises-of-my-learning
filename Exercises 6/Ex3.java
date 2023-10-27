@@ -34,18 +34,18 @@ public class Ex3 {
         }
     }
 
-    /*public static void EsSimetrica(int[][] tabla) {
-        for (int i = 0; i <= 3; i++) {
-            for (int x = 0; x <= 3; x++) {
-                if (
-
-                ){
-
-                }
-            }
+    public static void EsSimetrica(int[][] tabla) {
+        if (
+                (tabla[0][1] == tabla[1][0]) && (tabla[0][2] == tabla[2][0]) &&
+                (tabla[0][3] == tabla[3][0]) && (tabla[3][1] == tabla[1][3]) &&
+                (tabla[3][2] == tabla[2][3]) && (tabla[2][1] == tabla[1][2])
+        ){
+            System.out.println("ES SIMETRICA");
+        }else {
+            System.out.println("NO ES SIMETRICA");
         }
 
-    }*/
+    }
 
     public static void main(String[] args) {
 
@@ -59,7 +59,7 @@ public class Ex3 {
 
         CompletTabla(tabla);
 
-       // EsSimetrica(tabla);
+       EsSimetrica(tabla);
 
     }
 }
