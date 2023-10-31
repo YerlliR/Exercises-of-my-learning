@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Ex2 {
 
     private static void ImpTabla(String[][] tabla) {
+  	System.out.print("\033[H\033[2J");
         System.out.println("--------------");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -53,6 +54,7 @@ public class Ex2 {
     
 
     public static void main(String[] args) throws InterruptedException {
+    	System.out.print("\033[H\033[2J");
         String[][] tabla;
         int cordenadaY;
         int cordenadaX;
@@ -66,6 +68,8 @@ public class Ex2 {
 
         System.out.println(" Este es un programa para jugar al 3 en raya:\n");
         System.out.println("--------------");
+        
+        
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 tabla[i][j] = "-";
