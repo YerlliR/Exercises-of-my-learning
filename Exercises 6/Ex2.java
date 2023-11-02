@@ -5,18 +5,23 @@ public class Ex2 {
 
     private static void ImpTabla(String[][] tabla) {
   	System.out.print("\033[H\033[2J");
-        System.out.println("--------------");
+        System.out.println("\u250C\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u2510");
         for (int i = 0; i < 3; i++) {
+	    System.out.print("\u2502");
             for (int j = 0; j < 3; j++) {
                 if (j == 2) {
-                    System.out.println(tabla[i][j]);
+                    System.out.println("  " + tabla[i][j] + "  \u2502");
+
                 }else {
-
-                    System.out.print(tabla[i][j] + "  |  ");
+                    System.out.print("  " + tabla[i][j] + "  \u2502");
                 }
-
             }
-            System.out.println("--------------");
+            if (i == 2){
+            	System.out.println("\u2514\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2518");
+            }else{
+            	System.out.println("\u251C\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u2524");
+            }
+
         }
     }
 
@@ -67,19 +72,26 @@ public class Ex2 {
         tabla = new String[3][3];
 
         System.out.println(" Este es un programa para jugar al 3 en raya:\n");
-        System.out.println("--------------");
+        System.out.println("\u250C\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u2510");
         
         
         for (int i = 0; i < 3; i++) {
+	    System.out.print("\u2502");
             for (int j = 0; j < 3; j++) {
                 tabla[i][j] = "-";
                 if (j == 2) {
-                    System.out.println(tabla[i][j]);
+                    System.out.println("  " + tabla[i][j] + "  \u2502");
+
                 }else {
-                    System.out.print(tabla[i][j] + "  |  ");
+                    System.out.print("  " + tabla[i][j] + "  \u2502");
                 }
             }
-            System.out.println("--------------");
+            if (i == 2){
+            	System.out.println("\u2514\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2518");
+            }else{
+            	System.out.println("\u251C\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u2524");
+            }
+
         }
 
 
