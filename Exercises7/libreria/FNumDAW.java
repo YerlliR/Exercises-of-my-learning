@@ -124,7 +124,6 @@ public class FNumDAW {
         StringBuilder primeraMitad = parteNumero(numero2,0,longMitad);
         StringBuilder segundaMitad = parteNumero(numero2,longMitad + 1,longitud);
 
-        Integer.valueOf(String.valueOf(segundaMitad));
         if (Integer.valueOf(String.valueOf(primeraMitad)) + Integer.valueOf(String.valueOf(segundaMitad)) == numero && primeraMitad.length() == segundaMitad.length()){
             return "Este numero es Kaprekar";
         }
