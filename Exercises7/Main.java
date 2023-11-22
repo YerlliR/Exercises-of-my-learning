@@ -3,9 +3,9 @@
 //Soy consciente de que podria haberme ahorrado mas codigo pero me he dado cuenta mientras lo hacia intentare aplicarlo para la siguiente :)
 //Soy consciente de que podria haberme ahorrado mas codigo pero me he dado cuenta mientras lo hacia intentare aplicarlo para la siguiente :)
 //Soy consciente de que podria haberme ahorrado mas codigo pero me he dado cuenta mientras lo hacia intentare aplicarlo para la siguiente :)
-package Exercises7;
 
-import java.util.Arrays;
+import libreria.FNumDAW;
+
 import java.util.Scanner;
 
 public class Main {
@@ -33,14 +33,14 @@ public class Main {
                             "13. Numeros primos de 1 a 1000                 \n" +
                             "14. Numeros capicua de 1000 a 9999             \n" +
                             "15. Primo menor de palabra en ASCII            \n" +
-                            "16. \n" +
+                            "16. Constante de Kaprekar, \n" +
                             "17. Generador de arrays                        \n" +
                             "18. Buscar el numero mas pequeño de una array  \n" +
                             "19. Buscar el numero mas grande de una array   \n" +
                             "20. Hacer la media de los numeros de una array \n" +
                             "21. Detector de valor en Array                 \n" +
                             "22. Buscar el numero en Array                  \n" +
-                            "19. Voltear Array                              \n"
+                            "23. Voltear Array                              \n"
         );
 
         while(continuacion){
@@ -204,14 +204,15 @@ public class Main {
                 break;
 
                 case 16:
-                    /*
-                    System.out.println("Dime cuantas palabras / caracteres vas a querer saber su primo menor en asci");
-                    int veces = scanner.nextInt();
+                    System.out.println("Dime un numero de 4 cifras y te dire cuantas vueltas necesita para ser constante de kaprekar");
+                    int vueltas = scanner.nextInt();
 
-                    FNumDAW.primoMenorDePalabra(veces);
+                    System.out.println(FNumDAW.constanteKaprekar(vueltas));
 
-                    continuacion = FNumDAW.continuacion();*/
+                    continuacion = FNumDAW.continuacion();
                 break;
+
+
 
                 case 17:
                     System.out.println("Dime el tamaño de la array de randoms");
