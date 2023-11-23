@@ -16,34 +16,34 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println(FNumDAW.esPrimo(7));
-        System.out.println("Esta es la lista de mini porgramas que tenemos:");
-        System.out.println( "1.  Calculoar potencias                        \n" +
-                            "2.  Contar longitud de numeros                 \n" +
-                            "3.  Voltear un numero                          \n" +
-                            "4.  Saber si un numero es capicua              \n" +
-                            "5.  Numero primo                               \n" +
-                            "6.  Siguiente primo                            \n" +
-                            "7.  Anterior primo                             \n" +
-                            "8.  Extraccion de posicion de un numero        \n" +
-                            "9.  Busca numeros                              \n" +
-                            "10. Trozo de numero                            \n" +
-                            "11. Juntar dos numeros                         \n" +
-                            "12. Kaprekar                                   \n" +
-                            "13. Numeros primos de 1 a 1000                 \n" +
-                            "14. Numeros capicua de 1000 a 9999             \n" +
-                            "15. Primo menor de palabra en ASCII            \n" +
-                            "16. Constante de Kaprekar, \n" +
-                            "17. Generador de arrays                        \n" +
-                            "18. Buscar el numero mas pequeño de una array  \n" +
-                            "19. Buscar el numero mas grande de una array   \n" +
-                            "20. Hacer la media de los numeros de una array \n" +
-                            "21. Detector de valor en Array                 \n" +
-                            "22. Buscar el numero en Array                  \n" +
-                            "23. Voltear Array                              \n"
-        );
-
         while(continuacion){
+            System.out.print("\033[H\033[2J");
+            System.out.println("Esta es la lista de mini porgramas que tenemos:");
+            System.out.println(
+                    "1.  Calculoar potencias                        \n" +
+                    "2.  Contar longitud de numeros                 \n" +
+                    "3.  Voltear un numero                          \n" +
+                    "4.  Saber si un numero es capicua              \n" +
+                    "5.  Numero primo                               \n" +
+                    "6.  Siguiente primo                            \n" +
+                    "7.  Anterior primo                             \n" +
+                    "8.  Extraccion de posicion de un numero        \n" +
+                    "9.  Busca numeros                              \n" +
+                    "10. Trozo de numero                            \n" +
+                    "11. Juntar dos numeros                         \n" +
+                    "12. Kaprekar                                   \n" +
+                    "13. Numeros primos de 1 a 1000                 \n" +
+                    "14. Numeros capicua de 1000 a 9999             \n" +
+                    "15. Primo menor de palabra en ASCII            \n" +
+                    "16. Constante de Kaprekar, \n" +
+                    "17. Generador de arrays                        \n" +
+                    "18. Buscar el numero mas pequeño de una array  \n" +
+                    "19. Buscar el numero mas grande de una array   \n" +
+                    "20. Hacer la media de los numeros de una array \n" +
+                    "21. Detector de valor en Array                 \n" +
+                    "22. Buscar el numero en Array                  \n" +
+                    "23. Voltear Array                              \n"
+            );
 
             System.out.println("Cual quieres probar?");
             eleccion = scanner.nextInt();
@@ -55,7 +55,7 @@ public class Main {
                     System.out.println("Dime la base de la operacion que quieres realizar:");
                     double base = scanner.nextDouble();
 
-                    System.out.println("Dime la base de la operacion que quieres realizar:");
+                    System.out.println("Dime el exponente de la operacion que quieres realizar:");
                     int exponente = scanner.nextInt();
 
                     System.out.println(FNumDAW.potencia(base,exponente));
@@ -240,9 +240,9 @@ public class Main {
                     String seleccion = scanner.next();
 
                     if (eleccion == 18){
-                        FNumDAW.minimoArrayInt(tamanyArray2,seleccion);
+                        System.out.println(FNumDAW.minimoArrayInt(tamanyArray2,seleccion));
                     } else if (eleccion == 19) {
-                        FNumDAW.maximoArrayInt(tamanyArray2, seleccion);
+                        System.out.println(FNumDAW.maximoArrayInt(tamanyArray2, seleccion));
                     } else if (eleccion == 20) {
                         FNumDAW.mediaArrayInt(tamanyArray2, seleccion);
                     }

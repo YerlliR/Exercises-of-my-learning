@@ -191,7 +191,7 @@ public class FNumDAW {
         System.out.println();
     }
 
-    public static void minimoArrayInt(int tamanyoArray, String randomArraySiNo){
+    public static String minimoArrayInt(int tamanyoArray, String randomArraySiNo){
 
         int menor = 2147483647;
 
@@ -232,11 +232,11 @@ public class FNumDAW {
             }
         }
 
-        System.out.println("El numero mas pequeño de la array es: " + menor);
+        return "El numero mas pequeño de la array es: " + menor;
 
     }
 
-    public static void maximoArrayInt(int tamanyoArray, String randomArraySiNo){
+    public static String maximoArrayInt(int tamanyoArray, String randomArraySiNo){
 
         int mayor = -2147483648;
 
@@ -277,10 +277,10 @@ public class FNumDAW {
             }
         }
 
-        System.out.println("El numero mas pequeño de la array es: " + mayor);
+        return "El numero mas pequeño de la array es: " + mayor;
     }
 
-    public static void mediaArrayInt(int tamanyoArray, String randomArraySiNo){
+    public static String mediaArrayInt(int tamanyoArray, String randomArraySiNo){
 
         if (randomArraySiNo.equalsIgnoreCase("Si")){
             int[] arraysNums = new int[tamanyoArray];
@@ -290,7 +290,7 @@ public class FNumDAW {
                 arraysNums[x] = scanner.nextInt();
             }
 
-            System.out.println("La media de la array es: " + sacarMedia(arraysNums));
+            return "La media de la array es: " + sacarMedia(arraysNums);
         }else {
 
             System.out.println("Dime el numero mas pequeño que quieres que se almacenen en la array");
@@ -303,7 +303,7 @@ public class FNumDAW {
             String imprimir = scanner.next();
 
             int[] arrayGenerada = generaArrayInt(tamanyoArray, randomMin, randomMax, imprimir);
-            System.out.println("La media de la array es: " + sacarMedia(arrayGenerada));
+            return "La media de la array es: " + sacarMedia(arrayGenerada);
         }
 
 
@@ -318,7 +318,7 @@ public class FNumDAW {
         return numeroFinalizado;
     }
 
-    public static void estaEnArrayInt(int tamanyoArray, String randomArraySiNo, int numeroABuscar){
+    public static String estaEnArrayInt(int tamanyoArray, String randomArraySiNo, int numeroABuscar){
 
 
         if (randomArraySiNo.equalsIgnoreCase("Si")){
@@ -328,7 +328,7 @@ public class FNumDAW {
                 System.out.println("Dime la posicion " + x + " de la array");
                 arraysNums[x] = scanner.nextInt();
             }
-            System.out.println(buscaBusca(arraysNums,numeroABuscar,true));
+            return buscaBusca(arraysNums,numeroABuscar,true);
         }else {
 
             System.out.println("Dime el numero mas pequeño que quieres que se almacenen en la array");
@@ -341,7 +341,7 @@ public class FNumDAW {
             String imprimir = scanner.next();
 
             int[] arrayGenerada = generaArrayInt(tamanyoArray, randomMin, randomMax, imprimir);
-            System.out.println(buscaBusca(arrayGenerada,numeroABuscar,true));
+            return buscaBusca(arrayGenerada,numeroABuscar,true);
         }
 
     }
@@ -360,7 +360,7 @@ public class FNumDAW {
         return "NO esta este numero en la array";
     }
 
-    public static void posicionEnArray(int tamanyoArray, String randomArraySiNo, int numeroABuscar){
+    public static String posicionEnArray(int tamanyoArray, String randomArraySiNo, int numeroABuscar){
 
 
         if (randomArraySiNo.equalsIgnoreCase("Si")){
@@ -370,7 +370,7 @@ public class FNumDAW {
                 System.out.println("Dime la posicion " + x + " de la array");
                 arraysNums[x] = scanner.nextInt();
             }
-            System.out.println(buscaBusca(arraysNums,numeroABuscar,true));
+            return buscaBusca(arraysNums,numeroABuscar,true);
         }else {
 
             System.out.println("Dime el numero mas pequeño que quieres que se almacenen en la array");
@@ -383,7 +383,7 @@ public class FNumDAW {
             String imprimir = scanner.next();
 
             int[] arrayGenerada = generaArrayInt(tamanyoArray, randomMin, randomMax, imprimir);
-            System.out.println(buscaBusca(arrayGenerada,numeroABuscar,true));
+            return buscaBusca(arrayGenerada,numeroABuscar,true);
         }
 
     }
