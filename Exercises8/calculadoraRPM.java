@@ -1,4 +1,3 @@
-package Exercises8;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
@@ -10,8 +9,8 @@ public class calculadoraRPM {
 
     public static void limpiarPantalla () {
         System.out.print("\033[H\033[2J");
-    }
 
+    }
     public static double[] numLinias (){
 
         limpiarPantalla();
@@ -22,11 +21,8 @@ public class calculadoraRPM {
         for (int i = 0; i < calculadora.length; i++){
             calculadora[i] = 0;
         }
-
         return calculadora;
     }
-
-
 
     public static void imprimirCalculadora(double[] calculadora) {
         limpiarPantalla();
@@ -55,10 +51,8 @@ public class calculadoraRPM {
         for (int i = arr.length - 2; i > 0; i--) {
             arr[i] = arr[i - 1];
         }
-
         return arr;
     }
-
 
     public static void main(String[] args) {
 
@@ -80,9 +74,9 @@ public class calculadoraRPM {
                     dato.equals("*") ||
                     dato.equals("/"))
             {
-
                 if (dato.equals("+")){
                     calculadora[calculadora.length - 1] = calculadora[calculadora.length - 2] + calculadora[calculadora.length - 1];
+
                 } else if ( dato.equals("-")) {
                     calculadora[calculadora.length - 1] = calculadora[calculadora.length - 2] - calculadora[calculadora.length - 1];
 
@@ -103,9 +97,7 @@ public class calculadoraRPM {
                     calculadora = rotArrayArriba(calculadora);
                     calculadora[calculadora.length - 1] = Integer.parseInt(dato);
                 }
-
             }
-
         }
     }
 }
