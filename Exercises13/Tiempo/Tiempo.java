@@ -1,5 +1,3 @@
-package Exercises13.Tiempo;
-
 public class Tiempo {
     protected int horas;
     protected int minutos;
@@ -39,4 +37,15 @@ public class Tiempo {
     public String toString() {
         return  horas + "h " + minutos + "m " + segundos + "s ";
     }
+
+    public int compareTo(Tiempo otroTiempo) {
+        if (this.horas != otroTiempo.horas) {
+            return Integer.compare(this.horas, otroTiempo.horas);
+        } else if (this.minutos != otroTiempo.minutos) {
+            return Integer.compare(this.minutos, otroTiempo.minutos);
+        } else {
+            return Integer.compare(this.segundos, otroTiempo.segundos);
+        }
+    }
+
 }
