@@ -1,3 +1,5 @@
+package Exercises13.Tiempo;
+
 public class Tiempo {
     protected int horas;
     protected int minutos;

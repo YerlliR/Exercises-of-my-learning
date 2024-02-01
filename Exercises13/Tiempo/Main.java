@@ -1,3 +1,6 @@
+package Exercises13.Tiempo;
+
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -16,6 +19,7 @@ public class Main {
             System.out.println("Cual de estas opciones quieres realizar con el tiempo seleccionado");
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
+            System.out.println("Ordenar tiempos");
             System.out.println("3. Salir");
             int eleccion = scanner.nextInt();
             switch (eleccion){
@@ -24,6 +28,9 @@ public class Main {
                     break;
                 case 2:
                     System.out.println(restar(tiempoPrincipal));
+                    break;
+                case 3:
+                    System.out.println();
                     break;
                 default:
                     System.exit(0);
@@ -90,5 +97,24 @@ public class Main {
         return tiempoFinal;
     }
 
+    public static void ordenar(Tiempo principal){
+        HashMap <Integer, Tiempo> mapaMap = new HashMap<>();
+        mapaMap.put(0,principal);
+        System.out.println("Dime cuantos numeros quieres comparar");
+        int cantidad = scanner.nextInt();
+        for (int x = 1; x <= cantidad; x++){
+            System.out.println("Dime cuantas horas tiene el tiempo que quieres:");
+            int horas = scanner.nextInt();
+            System.out.println("Dime cuantos minutos tiene el tiempo que quieres:");
+            int minutos = scanner.nextInt();
+            System.out.println("Dime cuantos segundos tiene el tiempo que quieres:");
+            int segundos = scanner.nextInt();
+            Tiempo tiemposMap = new Tiempo(horas, minutos, segundos);
+            mapaMap.put(x,tiemposMap);
+        }
+
+        for()
+
+    }
 
 }
