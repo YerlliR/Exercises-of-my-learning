@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class SaveUserData {
+public class InfoUsu{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ESCRIBE \"PIMPOLLO\" PARA SALIR DEL PROGRAMA");
