@@ -26,22 +26,21 @@ public class Menu {
                     boolean cp = true;
 
                     while (cp) {
-                        //pillo los datos y los meto en una variable nombre que luego meto en el hashmap
                         Elem1 meterdatos = (Elem1)ois.readObject();
                         String nombre = meterdatos.getOBJECT();
                         lista.put(nombre, meterdatos);
                     }
                 } catch (EOFException e) {
-                    System.out.println("ERROR");
+                    System.out.println("err");
                 }
-                //limpio la pantalla gracias al Ginés, el dios supremo que me enseñó a hacerlo
-                System.out.println("\033[H\033[2J");
-                System.out.println( "Bienvenido al menú Saguaro, elige lo que quieres hacer:    \n" +
-                        "1.Nombre del objeto                                        \n" +
-                        "2.Constelación                                             \n " +
-                        "3.Magnitud                                                 \n " +
+                System.out.println( 
+                        "OPCIONES:                                                  \n " +
+                        "1.Nombre del objeto                                        \n " +
+                        "2.Objetos por constelacion                                 \n " +
+                        "3.Objetos por magnitud                                     \n " +
                         "4.Salir                                                    \n "
                 );
+
                 System.out.println("Dime un numero del 1 al 4, ambos números incluídos.");
 
                 try {
@@ -50,12 +49,10 @@ public class Menu {
 
                     switch (op) {
                         case 1:
-                            //remplazo todos los espacios con comas
                             System.out.println("Introduce el nombre del objeto: ");
                             String nombreobjeto = sc.nextLine().replaceAll(" ", "");
 
                             for(Elem1 elem1 : lista.values()) {
-                                //si el objeto es igual al nombre que hemos puesto, lo muestra
                                 if(elem1.getOBJECT().equals(nombreobjeto)){
                                     elem1.printdatos();
                                 }
@@ -63,9 +60,7 @@ public class Menu {
                             continue;
 
                         case 2:
-                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            //lo mismo que el case 1 pero con los demás nombres y añadiendo un mensaje en caso de no encontrar nada////
-                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                           
                             System.out.println("Introduce el nombre de la constelación: ");
                             String constelacion = sc.nextLine();
                             boolean seguir = false;
@@ -82,9 +77,7 @@ public class Menu {
                             continue;
 
                         case 3:
-                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            //lo mismo que el case 1 pero con los demás nombres y añadiendo un mensaje en caso de no encontrar nada////
-                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        
                             Double magnitud;
                             System.out.println("¿Que magnitud buscas?");
                             magnitud = sc.nextDouble();
@@ -100,25 +93,20 @@ public class Menu {
                             continue;
 
                         case 4:
-                            //saliendo del programa
-                            System.out.println("Vas a salir del programa, ¡hasta la próxima!");
+                            System.out.println("CHAUUU");
                             continue;
 
                         default:
-                            System.out.println("Valor incorrecto, tiene que ser un número entre el 1 y el 4, ambos incluídos.");
+                            System.out.println("tiene que ser un número entre el 1 y el 4");
                             continue;
                     }
                 } catch (NumberFormatException ex) {
-                    //en caso de poner cualquier otra cosa enseña un mensaje en lugar de la excepcións
-                    System.out.println("Por favor, ingresa un número del 1 al 4.");
+                    System.out.println("dime un número del 1 al 4.");
                     op = 0;
                 }
 
             } while (op != 4);
-            //si lo que elegimos no es igual a 4 cerramos los scanners y salimos del programa
-            fis.close();
-            ois.close();
-            sc.close();
+
         } catch (Exception e) {
             System.out.println("ERROR "+e.getMessage());
         }
